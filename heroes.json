@@ -1,0 +1,31 @@
+{
+  "person": [
+    {
+      "id": "Иван",
+      "password": "Hello_World2211+",
+      "description": "Привет!",
+      "element": "fire"
+    },
+    {
+      "id": "Андрей",
+      "password": "Hello_World2211+",
+      "description": "хаха",
+      "element": "earth"
+    },
+    {
+      "id": "Дебил_Иванович",
+      "password": "Hello_World2211+",
+      "description": "уацуа",
+      "element": "water"
+    }
+  ],
+  "teacher": [
+    {
+      "id": "dryafs",
+      "name": "Andrii Kudlai",
+      "email": "kudlajandrej412@gmail.com",
+      "password": "123456",
+      "subject": "фізика"
+    }
+  ]
+}
