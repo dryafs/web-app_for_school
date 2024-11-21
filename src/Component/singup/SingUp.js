@@ -1,9 +1,11 @@
 import { useState } from 'react'
 
-import { useHttp } from '../../hooks/useHttp'
 import Spinner from '../Spinner/Spinner'
 import ErrorMessage from '../errorMessage/ErrorMessage'
-import ProofMessage from '../proofMessage/ProofMessage'
+
+import { useSelector, useDispatch } from 'react-redux'
+import { createUser } from '../mainpage/userSlice'
+import { Link, useNavigate } from 'react-router-dom'
 
 import './singup.css'
 import '../../reset.css'
@@ -23,20 +25,15 @@ const SignUp = () => {
         subject: ''
         
     })
-    const [loading, setLoading] = useState(false)
-    const [error, setError] = useState(false)
-    const [proof, setProof]  = useState(false)
-
-    const {request} = useHttp();
+    
+    const {loading, error, proof} = useSelector(state => state.user)
+    const dispatch = useDispatch()
+    const navigate = useNavigate()
 
     const onCreateTeacher = (data) => {
-        try{
-            request(`http://localhost:3001/teacher`, 'POST', JSON.stringify(data)).then(() => {setLoading(false); setProof(true)})
-            
-        } catch(e){
-            setLoading(false)
-            setProof(false)
-            setError(true)
+        dispatch(createUser(data))
+        if(proof === true){
+            navigate('/')
         }
     }
 
@@ -52,18 +49,16 @@ const SignUp = () => {
     const onSubmitting = (e) => {
         e.preventDefault();
         onCreateTeacher(formInput)
-        setLoading(true) 
+
     }
 
-    const proofMessage = proof ? <ProofMessage/> : null
     const load = loading ? <Spinner/> : null
     const mistake = error ? <ErrorMessage/> : null
-    const view = (!loading && !error && !proof) ? <View onSubmitting={onSubmitting} name={formInput.name} subject={formInput.subject}  email={formInput.email} login={formInput.id} password={formInput.password} onChangeValue={onChangeValue}/> : null
+    const view = (!loading && !error) ? <View onSubmitting={onSubmitting} name={formInput.name} subject={formInput.subject}  email={formInput.email} login={formInput.id} password={formInput.password} onChangeValue={onChangeValue}/> : null
 
-    let displayStyle = load || error || proofMessage ? "other__content" : "login__section"
+    let displayStyle = load || error ? "other__content" : "sign__section"
     return(
-        <div className={displayStyle} >
-            {proofMessage}
+        <div className={displayStyle}>
             {load}
             {mistake}
             {view}
@@ -75,10 +70,10 @@ const View = (props) => {
     const {onSubmitting, subject, name, login, password, email, onChangeValue} = props;
     return(
         <>
-            <div className='background__img__cosmo'>
+            <div className='background__img__dog'>
                 <img src={dog_bg} alt="" className='dog_bg'/>
             </div>
-            <div className="login__inner">
+            <div className="sign__inner">
                 <div className='title__sign__inner'>
                     <h1 className='title__sign'>Реєстрація</h1>
                     <p className='text__sign'>Ви можете зареєструватися, тільки якщо ви вчитель!</p>
@@ -122,7 +117,7 @@ const View = (props) => {
                         <option value="історія">Історію</option>
                     </select>
 
-                    <div className='api__login__links'>
+                    <div className='api__sign__links'>
                         <button>
                             <img src={google} alt=""/>
                         </button>
@@ -136,7 +131,7 @@ const View = (props) => {
 
                 <div className='reg__link__inner'>
                     <p className='reg__link__text'>Вже є акаунт?</p>
-                    <a href="" className='reg__link'>Увійти</a>
+                    <Link to='/' className='reg__link'>Увійти</Link>
                 </div>
             </div>
 

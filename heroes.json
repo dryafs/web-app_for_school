@@ -21,11 +21,32 @@
   ],
   "teacher": [
     {
-      "id": "dryafs",
+      "id": "andrii",
       "name": "Andrii Kudlai",
       "email": "kudlajandrej412@gmail.com",
       "password": "123456",
       "subject": "фізика"
+    },
+    {
+      "id": "vishenka",
+      "name": "Andrii Kudlai",
+      "email": "kudlajandrej412@gmail.com",
+      "password": "12345",
+      "subject": "математика"
+    },
+    {
+      "id": "blabla",
+      "name": "Andrii Kudlai",
+      "email": "kudlajandrej412@gmail.com",
+      "password": "12",
+      "subject": "література"
+    },
+    {
+      "id": "hello",
+      "name": "Andrii Kudlai",
+      "email": "kudlajandrej412@gmail.com",
+      "password": "12",
+      "subject": "література"
     }
   ]
 }

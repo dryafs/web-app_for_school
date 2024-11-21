@@ -1,8 +1,12 @@
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
 
-import { useHttp } from '../../hooks/useHttp'
+import { useDispatch, useSelector } from 'react-redux';
 import Spinner from '../Spinner/Spinner'
 import ErrorMessage from '../errorMessage/ErrorMessage'
+
+import { getUser } from '../mainpage/userSlice';
+
+import { Link, useNavigate } from 'react-router-dom';
 
 import './login.css'
 import '../../reset.css'
@@ -13,21 +17,18 @@ import cosmo_bg from '../../img/cosmo_bg.png'
 import google from '../../img/google.svg'
 import apple from '../../img/apple.svg'
 
+
 const Login = () => {
     const [formInput, setFormInput] = useState({
         path: '',
         login: '',
         password: ''
     })
-    const [validate, setValidate] = useState(true)
-    const [loading, setLoading] = useState(false)
-    const [error, setError] = useState(false)
-
-    const {request} = useHttp();
-
-    const onGetUser = () => {
-        request(`http://localhost:3001/${formInput.path}/${formInput.login}`).then(data => onCheckPassword(data)).catch(() => {setError(true); setLoading(false)})
-    }
+    const [loginAttempted, setLoginAttempted] = useState(false)
+    
+    const {loading, error, proof} = useSelector(state => state.user)
+    const dispatch = useDispatch()
+    const navigate = useNavigate()
 
     const onChangeValue = (e) => {
         const {name, value} = e.target
@@ -40,33 +41,33 @@ const Login = () => {
 
     const onSubmitting = async (e) => {
         e.preventDefault();
-        onGetUser();  
-        setLoading(true) 
+        setLoginAttempted(true);
+        dispatch(getUser(formInput))
     }
 
-    const onCheckPassword = (user) => {
-        setLoading(false)
-        setError(false)
-        if(user.password === formInput.password){
-            setValidate(true);
-            setFormInput({
-                login: '',
-                password: ''
-            })
-            console.log('Log in!')
-            console.log(user)
-        } else{
-            setValidate(false);
-            setFormInput((prevData) => ({
-                ...prevData,
-                password: ''
-            }))
+    useEffect(() => {
+        if(loginAttempted){
+            if(proof === false){
+                setFormInput((prevData) => ({
+                    ...prevData,
+                    password: ''
+                }))
+                setLoginAttempted(false)
+            } else if(proof === true){
+                setFormInput({
+                    path: '',
+                    login: '',
+                    password: ''
+                })
+            navigate('/homepage')
         }
-    }
+        }
+    }, [proof, navigate, loginAttempted])
+
 
     const load = loading ? <Spinner/> : null
     const mistake = error ? <ErrorMessage/> : null
-    const view = (!loading && !error) ? <View onSubmitting={onSubmitting} path={formInput.path} login={formInput.login} password={formInput.password} validate={validate} onChangeValue={onChangeValue}/> : null
+    const view = (!loading && !error) ? <View onSubmitting={onSubmitting} path={formInput.path} login={formInput.login} password={formInput.password} proof={proof} onChangeValue={onChangeValue}/> : null
 
     let displayStyle = load || error ? "other__content" : "login__section"
     return(
@@ -79,7 +80,16 @@ const Login = () => {
 }
 
 const View = (props) => {
-    const {onSubmitting, path, login, password, validate, onChangeValue} = props;
+    const {onSubmitting, path, login, password, proof, onChangeValue} = props;
+    let showValidatePassword = false
+    if(proof == null){
+        showValidatePassword = false
+    } else if(proof === false){
+        showValidatePassword = true
+    } else if(proof === true){
+        showValidatePassword = false
+    }
+
     return(
         <>
             <div className='background__img__cosmo'>
@@ -106,11 +116,11 @@ const View = (props) => {
                             onChange={onChangeValue}
                             className="input"/>
                     <input type="password" 
-                            placeholder={validate ? "пароль" : "некоректний пароль"}
+                            placeholder={showValidatePassword ? "некоректний пароль" : "пароль"}
                             name='password'
                             onChange={onChangeValue}
                             value={password}
-                            className={validate ? "input input__second" : "input input__second active"}/>
+                            className={showValidatePassword ? "input input__second active" : "input input__second"}/>
                     <span className='input_span'>забули пароль?</span>
 
                     <div className='api__login__links'>
@@ -127,7 +137,7 @@ const View = (props) => {
 
                 <div className='reg__link__inner'>
                     <p className='reg__link__text'>Ще немає акаунту?</p>
-                    <a href="" className='reg__link'>Зареєструватися</a>
+                    <Link to='/sign' className='reg__link'>Зареєструватися</Link>
                 </div>
             </div>
 
