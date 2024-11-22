@@ -16,10 +16,12 @@ const MarkingStudent = () => {
     useEffect(() => {
         dispatch(getClasses())
         dispatch(getAllStudents())
+        // eslint-disable-next-line
     }, [])
 
     useEffect(() => {
         dispatch(filterStudents(filterClass))
+        // eslint-disable-next-line
     }, [filterClass])
 
     const onFilterChange = (e) => {
@@ -91,8 +93,9 @@ const MarkingStudent = () => {
                         )
                     }) : null}
                 </ul>
-
+                <div className="button__inner__submit">
                 <button onClick={onSubmitMarks} className="btn_submit_mark">Зберігти</button>
+                </div>
             </div>
         </div>
     )

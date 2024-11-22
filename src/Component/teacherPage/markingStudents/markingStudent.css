@@ -45,12 +45,20 @@
     border-radius: 8px;
 }
 
-.btn_submit_mark{
+.button__inner__submit{
     margin-top: auto;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.btn_submit_mark{
     margin-bottom: 30px;
     font-family: 'Kyiv Region';
     font-size: 20px;
-    color: #1C3177;
+    background-color: #404B7C;
+    color: #E1ECFF;
     padding: 5px 5px 5px 5px;
-    text-align: center;
+    width: 150px;
+    border-radius: 8px;
 }

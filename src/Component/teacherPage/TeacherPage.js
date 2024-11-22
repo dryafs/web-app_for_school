@@ -1,12 +1,20 @@
-import PageHeader from './pageHeader/PageHeader'
+import PageHeader from '../pageHeader/PageHeader'
 import MarkingStudent from './markingStudents/MarkingStudent'
-import './teacherPage.css'
+import AddStudentForm from './addStudentForm/AddStudentForm'
 
+import './teacherPage.css'
 const TeacherPage = () => {
     return(
         <>
             <PageHeader/>
-            <MarkingStudent/>
+            <div className='main__inner'>
+                <>
+                    <MarkingStudent/>
+                </>
+                <>
+                    <AddStudentForm/>
+                </>
+            </div>
         </>
     )
 }

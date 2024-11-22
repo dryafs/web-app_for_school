@@ -52,6 +52,14 @@ export const sendAllMark = createAsyncThunk(
     }
 )
 
+export const addStudent = createAsyncThunk(
+    'addStudent',
+    async (data) => {
+        const {request} = useHttp()
+        request(`http://localhost:3001/person`, 'POST', JSON.stringify(data))
+    }
+)
+
 const teacherSlice = createSlice({
     name: 'teacher',
     initialState,
