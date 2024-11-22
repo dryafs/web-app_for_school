@@ -1,22 +1,75 @@
 {
   "person": [
     {
-      "id": "Иван",
+      "id": "vishenka",
+      "name": "Гальченко Вікторія Едуардівна",
       "password": "Hello_World2211+",
-      "description": "Привет!",
-      "element": "fire"
-    },
-    {
-      "id": "Андрей",
-      "password": "Hello_World2211+",
-      "description": "хаха",
-      "element": "earth"
-    },
-    {
-      "id": "Дебил_Иванович",
-      "password": "Hello_World2211+",
-      "description": "уацуа",
-      "element": "water"
+      "type": "11-Г",
+      "diamond": 0,
+      "coin": 0,
+      "review": [
+        {
+          "teacher_login": "dryafs",
+          "review": "Вікторія прогулює уроки, але контролі пише на відмінно. Треба розбиратися"
+        }
+      ],
+      "subjects": [
+        {
+          "subjectname": "математика",
+          "subjects-marks": [
+            "12",
+            "10",
+            "12",
+            "10",
+            "12",
+            "5",
+            "9",
+            "10",
+            "12",
+            "8",
+            "8",
+            "12",
+            "1",
+            "10"
+          ]
+        },
+        {
+          "subjectname": "фізика",
+          "subjects-marks": [
+            "10",
+            "12",
+            "12",
+            "12",
+            "12",
+            "12",
+            "12"
+          ]
+        },
+        {
+          "subjectname": "історія",
+          "subjects-marks": [
+            "12"
+          ]
+        },
+        {
+          "subjectname": "література",
+          "subjects-marks": [
+            "10",
+            "11",
+            "4"
+          ]
+        }
+      ],
+      "homework": [
+        {
+          "subject-name": "математика",
+          "task": "Пройти контрольну роботу за темою 'чи я дебіл?'"
+        },
+        {
+          "subject-name": "фізика",
+          "task": "Пройти контрольну роботу за темою 'Ядерна фізика'"
+        }
+      ]
     }
   ],
   "teacher": [
@@ -25,28 +78,33 @@
       "name": "Andrii Kudlai",
       "email": "kudlajandrej412@gmail.com",
       "password": "123456",
-      "subject": "фізика"
+      "type": "математика",
+      "diamond": 0,
+      "coin": 0
     },
     {
-      "id": "vishenka",
-      "name": "Andrii Kudlai",
+      "id": "gav",
+      "name": "Tho",
       "email": "kudlajandrej412@gmail.com",
-      "password": "12345",
-      "subject": "математика"
+      "password": "222",
+      "type": "література",
+      "coin": 0,
+      "diamond": 0
     },
     {
-      "id": "blabla",
+      "id": "hhh",
       "name": "Andrii Kudlai",
       "email": "kudlajandrej412@gmail.com",
-      "password": "12",
-      "subject": "література"
-    },
-    {
-      "id": "hello",
-      "name": "Andrii Kudlai",
-      "email": "kudlajandrej412@gmail.com",
-      "password": "12",
-      "subject": "література"
+      "password": "2211",
+      "type": "література",
+      "coin": 0,
+      "diamond": 0
     }
+  ],
+  "classes": [
+    "11-Г",
+    "11-B",
+    "11-Б",
+    "11-A"
   ]
 }

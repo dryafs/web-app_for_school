@@ -4,7 +4,7 @@ import Spinner from '../Spinner/Spinner'
 import ErrorMessage from '../errorMessage/ErrorMessage'
 
 import { useSelector, useDispatch } from 'react-redux'
-import { createUser } from '../mainpage/userSlice'
+import { createUser } from '../Login/loginSlice'
 import { Link, useNavigate } from 'react-router-dom'
 
 import './singup.css'
@@ -22,7 +22,9 @@ const SignUp = () => {
         email: '',
         id: '',
         password: '',
-        subject: ''
+        type: '',
+        coin: 0,
+        diamond: 0
         
     })
     
@@ -54,7 +56,7 @@ const SignUp = () => {
 
     const load = loading ? <Spinner/> : null
     const mistake = error ? <ErrorMessage/> : null
-    const view = (!loading && !error) ? <View onSubmitting={onSubmitting} name={formInput.name} subject={formInput.subject}  email={formInput.email} login={formInput.id} password={formInput.password} onChangeValue={onChangeValue}/> : null
+    const view = (!loading && !error) ? <View onSubmitting={onSubmitting} name={formInput.name} type={formInput.type}  email={formInput.email} login={formInput.id} password={formInput.password} onChangeValue={onChangeValue}/> : null
 
     let displayStyle = load || error ? "other__content" : "sign__section"
     return(
@@ -67,7 +69,7 @@ const SignUp = () => {
 }
 
 const View = (props) => {
-    const {onSubmitting, subject, name, login, password, email, onChangeValue} = props;
+    const {onSubmitting, type, name, login, password, email, onChangeValue} = props;
     return(
         <>
             <div className='background__img__dog'>
@@ -107,8 +109,8 @@ const View = (props) => {
                     <select 
                         required
                         className="select last__imput" 
-                        name="subject"
-                        value={subject}
+                        name="type"
+                        value={type}
                         onChange={onChangeValue}>
                         <option>Я викладаю</option>
                         <option value="література">Літературу</option>

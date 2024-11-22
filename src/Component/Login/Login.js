@@ -4,7 +4,7 @@ import { useDispatch, useSelector } from 'react-redux';
 import Spinner from '../Spinner/Spinner'
 import ErrorMessage from '../errorMessage/ErrorMessage'
 
-import { getUser } from '../mainpage/userSlice';
+import { getUser } from './loginSlice';
 
 import { Link, useNavigate } from 'react-router-dom';
 
@@ -26,7 +26,7 @@ const Login = () => {
     })
     const [loginAttempted, setLoginAttempted] = useState(false)
     
-    const {loading, error, proof} = useSelector(state => state.user)
+    const {loading, error, proof, fullInformation} = useSelector(state => state.user)
     const dispatch = useDispatch()
     const navigate = useNavigate()
 
@@ -59,7 +59,8 @@ const Login = () => {
                     login: '',
                     password: ''
                 })
-            navigate('/homepage')
+            navigate(`${formInput.path}/homepage`)
+            console.log(fullInformation)
         }
         }
     }, [proof, navigate, loginAttempted])
