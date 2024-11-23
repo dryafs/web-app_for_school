@@ -1,7 +1,7 @@
 .add-form__inner{
     background-color: #F0F6FF;
     margin-top: 30px;
-    height: 40vh;
+    height: 50vh;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -9,7 +9,7 @@
 }
 
 .add-form__title{
-    padding-top: 24px;
+    padding-top: 30px;
     font-family: 'Kyiv Region';
     font-size: 20px;
     color: #404B7C;
@@ -19,7 +19,7 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin-top: 25px;
+    margin-top: 50px;
 }
 
 .input-form{
@@ -41,7 +41,7 @@
     width: 310px;
     padding: 10px 10px 10px 10px;
     border-radius: 8px;
-    margin-bottom: 25px;
+    margin-bottom: 50px;
 }
 
 .button__add-form{

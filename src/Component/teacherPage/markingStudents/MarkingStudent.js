@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react"
 import { useSelector, useDispatch } from "react-redux"
-import { getClasses, getAllStudents, sendAllMark } from "../teacherSlice"
+import { getClasses, getAllStudents, sendAllMark, getOneStudent} from "../teacherSlice"
 import { filterStudents } from "../teacherSlice"
 
 import './markingStudent.css'
@@ -47,6 +47,10 @@ const MarkingStudent = () => {
        setFilterClass("")
     }
 
+    const onSelectStudent = (id) => {
+        dispatch(getOneStudent(id))
+    }
+
     return(
         <div className="container">
             <div className="mark-student__inner">
@@ -59,15 +63,15 @@ const MarkingStudent = () => {
                         onChange={onFilterChange}>
                         <option value="">Оберіть клас...</option>
                         {classes.map(item => {
-                            return <option value={item}>{item}</option>
+                            return <option value={item.schoolClass}>{item.schoolClass}</option>
                         })}
                     </select>
                 </div>
                 <ul className="class-item__inner">
                     {filterClass !== undefined ? filteredStudents.map(item => {
                         return(
-                            <div className="class-item">
-                                <li key={item.id}>{item.name}</li>
+                            <div key={item.id} className="class-item">
+                                <li onClick={() => onSelectStudent(item.id)}>{item.name}</li>
                                 <select 
                                     required
                                     className="select__mark" 

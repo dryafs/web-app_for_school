@@ -1,0 +1,60 @@
+.homework-form__inner{
+    background-color: #F0F6FF;
+    margin-top: 5vh;
+    height: 40vh;
+    width: 40vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-radius: 8px;
+    text-align: center;
+}
+
+.homework-form__title{
+    font-family: 'Kyiv Region';
+    font-size: 20px;
+    color: #404B7C;
+    padding-top: 30px;
+    padding-bottom: 40px;
+}
+
+.homework-input{
+    height: 200px;
+    max-height: 200px;
+    width: 310px;
+    max-width: 310px;
+    margin-bottom: 15px;
+    padding: 15px 15px 15px 15px;
+    border-radius: 8px;
+    border: none;
+    background-color: #E1ECFF;
+}
+.homework-input.active{
+    border: 1px solid #FF0000;
+}
+
+.select-homework{
+    margin-bottom: 25px;
+    width: 310px;
+    background-color: #E1ECFF;
+    padding: 10px 10px 10px 10px;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+}
+.select-homework.active{
+    border: 1px solid #FF0000;
+}
+
+.button__homework-form__inner{
+    margin-bottom: 30px;
+    margin-top: 40px;
+    font-family: 'Kyiv Region';
+    font-size: 20px;
+    background-color: #404B7C;
+    color: #E1ECFF;
+    padding: 5px 5px 5px 5px;
+    width: 150px;
+    border-radius: 8px;
+}
+

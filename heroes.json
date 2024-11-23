@@ -9,8 +9,12 @@
       "coin": 0,
       "review": [
         {
-          "teacher_login": "dryafs",
+          "teacher_name": "Andrii Kudlai",
           "review": "Вікторія прогулює уроки, але контролі пише на відмінно. Треба розбиратися"
+        },
+        {
+          "teacher-name": "Andrii Kudlai",
+          "review": "НЕ ХОДИТЬ НА УРОКИ!!! В РІК 2!!!"
         }
       ],
       "subjects": [
@@ -38,28 +42,7 @@
             "10"
           ]
         }
-      ],
-      "homework": [
-        {
-          "subject-name": "математика",
-          "task": "Пройти контрольну роботу за темою 'чи я дебіл?'"
-        },
-        {
-          "subject-name": "фізика",
-          "task": "Пройти контрольну роботу за темою 'Ядерна фізика'"
-        }
       ]
-    },
-    {
-      "id": "андрій_кудалай",
-      "name": "Кудлай Андрій Андрійович",
-      "password": "андрій_кудлай",
-      "type": "11-Б",
-      "coin": 0,
-      "diamond": 0,
-      "homework": [],
-      "subjects": [],
-      "review": []
     }
   ],
   "teacher": [
@@ -92,9 +75,45 @@
     }
   ],
   "classes": [
-    "11-Г",
-    "11-B",
-    "11-Б",
-    "11-A"
+    {
+      "id": "1",
+      "schoolClass": "11-Г",
+      "homework": "verv"
+    },
+    {
+      "id": "2",
+      "schoolClass": "11-B",
+      "homework": [
+        {
+          "subjectname": "математика",
+          "homework": "fff24342"
+        }
+      ]
+    },
+    {
+      "id": "3",
+      "schoolClass": "11-Б",
+      "homework": []
+    },
+    {
+      "id": "4",
+      "schoolClass": "11-A",
+      "homework": []
+    },
+    {
+      "id": "f966",
+      "schoolClass": "5-A",
+      "homework": []
+    },
+    {
+      "id": "e9f433b1-f0d1-47d6-9175-b1860d506dcc",
+      "schoolClass": "6-А",
+      "homework": []
+    },
+    {
+      "id": "8870c714-83a2-474d-8bb2-81fb7232864d",
+      "schoolClass": "7-А",
+      "homework": []
+    }
   ]
 }

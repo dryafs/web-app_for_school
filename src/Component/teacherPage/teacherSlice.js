@@ -7,7 +7,8 @@ const initialState = {
     loading: false,
     error: false,
     classes: [],
-    filteredStudents: []
+    filteredStudents: [],
+    currentStudent: null
 }
 
 export const getClasses = createAsyncThunk(
@@ -32,7 +33,7 @@ export const sendAllMark = createAsyncThunk(
         const {key, type, mark} = props
         const {request} = useHttp()
         const student = await request(`http://localhost:3001/person/${key}`)
-        const subject = student.subjects.find(item => item['subjectname'] == type)
+        const subject = student.subjects.find(item => item['subjectname'] == type) // eslint-disable-next-line 
         if (subject) {
             subject['subjects-marks'].push(mark);
         } else {
@@ -56,7 +57,52 @@ export const addStudent = createAsyncThunk(
     'addStudent',
     async (data) => {
         const {request} = useHttp()
-        request(`http://localhost:3001/person`, 'POST', JSON.stringify(data))
+        return await request(`http://localhost:3001/person`, 'POST', JSON.stringify(data))
+    }
+)
+
+export const addClass = createAsyncThunk(
+    'addClass',
+    async (data) => {
+        const {request} = useHttp()
+        return await request(`http://localhost:3001/classes`, 'POST', JSON.stringify(data))
+    }
+)
+
+export const getOneStudent = createAsyncThunk(
+    'getOneStudent',
+    async (id) => {
+        const {request} = useHttp()
+        return await request(`http://localhost:3001/person/${id}`)
+    }
+)
+
+export const sendReview = createAsyncThunk(
+    'sendReview',
+    async ({id, data}) => {
+        const {request} = useHttp();
+        const student = await request(`http://localhost:3001/person/${id}`)
+        student.review.push(data)
+
+        return await request(`http://localhost:3001/person/${id}`, 'PUT', JSON.stringify(student))
+    }
+)
+
+export const sendHomework = createAsyncThunk(
+    'sendHomework',
+    async ({id, data}) => {
+        const {request} = useHttp()
+        const schoolClass = await request('http://localhost:3001/classes')
+
+        const element = schoolClass.find(item => item.id == id)
+        const existingHomework = element.homework.find(hw => hw.subjectname === data.subjectname);
+        if(!existingHomework){
+            element.homework.push(data)
+            return await request(`http://localhost:3001/classes/${id}`, 'PUT', JSON.stringify(element))
+        } else{
+            element.homework = data.homework;
+            return await request(`http://localhost:3001/classes/${id}`, 'PUT', JSON.stringify(element))
+        }
     }
 )
 
@@ -70,7 +116,7 @@ const teacherSlice = createSlice({
             } else{
                 state.filteredStudents = state.allStudents.filter(item => item.type === action.payload)   
             }
-        }
+        }  
     },
     extraReducers: (builder) => {
         builder
@@ -86,6 +132,7 @@ const teacherSlice = createSlice({
                 state.allStudents = action.payload
             })
             .addCase(getAllStudents.rejected, state => {state.error = true; state.loading = false})
+            .addCase(getOneStudent.fulfilled, (state, action) => {state.currentStudent = action.payload; console.log(action.payload)})
     }
 })
 
