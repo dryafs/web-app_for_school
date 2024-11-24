@@ -4,8 +4,6 @@ import { useHttp } from "../../hooks/useHttp";
 
 const initialState = {
     allStudents: [],
-    loading: false,
-    error: false,
     classes: [],
     filteredStudents: [],
     currentStudent: null
@@ -19,11 +17,39 @@ export const getClasses = createAsyncThunk(
     }
 )
 
+export const addClass = createAsyncThunk(
+    'addClass',
+    async (data, {dispatch}) => {
+        const {request} = useHttp()
+        await request(`http://localhost:3001/classes`, 'POST', JSON.stringify(data))
+        dispatch(getClasses())
+    }
+)
+
+
+
 export const getAllStudents = createAsyncThunk(
     'getAllStudents',
     async () => {
         const {request} = useHttp();
         return await request(`http://localhost:3001/person`)
+    }
+)
+
+export const addStudent = createAsyncThunk(
+    'addStudent',
+    async (data, {dispatch}) => {
+        const {request} = useHttp()
+        await request(`http://localhost:3001/person`, 'POST', JSON.stringify(data))
+        dispatch(getAllStudents())
+    }
+)
+
+export const getOneStudent = createAsyncThunk(
+    'getOneStudent',
+    async (id) => {
+        const {request} = useHttp()
+        return await request(`http://localhost:3001/person/${id}`)
     }
 )
 
@@ -34,6 +60,7 @@ export const sendAllMark = createAsyncThunk(
         const {request} = useHttp()
         const student = await request(`http://localhost:3001/person/${key}`)
         const subject = student.subjects.find(item => item['subjectname'] == type) // eslint-disable-next-line 
+        mark == 12 ? student.diamond += 5 : student.coin += 5
         if (subject) {
             subject['subjects-marks'].push(mark);
         } else {
@@ -50,30 +77,6 @@ export const sendAllMark = createAsyncThunk(
             'PUT',
             JSON.stringify(student)
         );
-    }
-)
-
-export const addStudent = createAsyncThunk(
-    'addStudent',
-    async (data) => {
-        const {request} = useHttp()
-        return await request(`http://localhost:3001/person`, 'POST', JSON.stringify(data))
-    }
-)
-
-export const addClass = createAsyncThunk(
-    'addClass',
-    async (data) => {
-        const {request} = useHttp()
-        return await request(`http://localhost:3001/classes`, 'POST', JSON.stringify(data))
-    }
-)
-
-export const getOneStudent = createAsyncThunk(
-    'getOneStudent',
-    async (id) => {
-        const {request} = useHttp()
-        return await request(`http://localhost:3001/person/${id}`)
     }
 )
 
@@ -95,14 +98,14 @@ export const sendHomework = createAsyncThunk(
         const schoolClass = await request('http://localhost:3001/classes')
 
         const element = schoolClass.find(item => item.id == id)
-        const existingHomework = element.homework.find(hw => hw.subjectname === data.subjectname);
-        if(!existingHomework){
+        const existingHomework = element.homework.findIndex(hw => hw.subjectname === data.subjectname);
+        if(existingHomework === - 1){
             element.homework.push(data)
-            return await request(`http://localhost:3001/classes/${id}`, 'PUT', JSON.stringify(element))
         } else{
-            element.homework = data.homework;
-            return await request(`http://localhost:3001/classes/${id}`, 'PUT', JSON.stringify(element))
+            element.homework[existingHomework] = data;
         }
+
+        return await request(`http://localhost:3001/classes/${id}`, 'PUT', JSON.stringify(element))
     }
 )
 
@@ -120,19 +123,15 @@ const teacherSlice = createSlice({
     },
     extraReducers: (builder) => {
         builder
-            .addCase(getClasses.pending, state => {state.loading = true})
             .addCase(getClasses.fulfilled, (state, action) => {
                 state.loading = false
                 state.classes = action.payload
             })
-            .addCase(getClasses.rejected, state => {state.error = true; state.loading = false})
-            .addCase(getAllStudents.pending, state => {state.loading = true; state.error = false})
             .addCase(getAllStudents.fulfilled, (state, action) => {
                 state.loading = false;
                 state.allStudents = action.payload
             })
-            .addCase(getAllStudents.rejected, state => {state.error = true; state.loading = false})
-            .addCase(getOneStudent.fulfilled, (state, action) => {state.currentStudent = action.payload; console.log(action.payload)})
+            .addCase(getOneStudent.fulfilled, (state, action) => {state.currentStudent = action.payload})
     }
 })
 

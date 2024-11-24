@@ -18,7 +18,8 @@ const AddClassForm = () => {
         e.preventDefault()
         let data = {
             id: uuidv4(),
-            schoolClass: schoolClass
+            schoolClass: schoolClass,
+            homework: []
         }
         if(schoolClass !== ''){
             dispatch(addClass(data))

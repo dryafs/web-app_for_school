@@ -5,8 +5,8 @@
       "name": "Гальченко Вікторія Едуардівна",
       "password": "Hello_World2211+",
       "type": "11-Г",
-      "diamond": 0,
-      "coin": 0,
+      "diamond": 20,
+      "coin": 10,
       "review": [
         {
           "teacher_name": "Andrii Kudlai",
@@ -15,12 +15,30 @@
         {
           "teacher-name": "Andrii Kudlai",
           "review": "НЕ ХОДИТЬ НА УРОКИ!!! В РІК 2!!!"
+        },
+        {
+          "teacher-name": "Andrii Kudlai",
+          "review": "Написала контрольну не дуже гарно. Будемо телефонувати батькам........."
+        },
+        {
+          "teacher-name": "Свєточка Біберова",
+          "review": "Не дитиночка - а золота, моя улюблена Вікусічка"
+        },
+        {
+          "teacher-name": "Andrii Kudlai",
+          "review": "efwef"
+        },
+        {
+          "teacher-name": "Andrii Kudlai",
+          "review": "egrgrerv"
         }
       ],
       "subjects": [
         {
           "subjectname": "математика",
           "subjects-marks": [
+            "12",
+            "8",
             "12"
           ]
         },
@@ -39,8 +57,127 @@
         {
           "subjectname": "література",
           "subjects-marks": [
+            "10",
+            "12",
+            "10",
+            "12",
+            "12",
+            "12"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "dryafs",
+      "name": "Кудлай Андрій Андрійович",
+      "password": "2211",
+      "type": "11-Г",
+      "coin": 0,
+      "diamond": 15,
+      "subjects": [
+        {
+          "subjectname": "література",
+          "subjects-marks": [
+            "12",
+            "12",
+            "12"
+          ]
+        },
+        {
+          "subjectname": "математика",
+          "subjects-marks": [
+            "12"
+          ]
+        }
+      ],
+      "review": [
+        {
+          "teacher-name": "Andrii Kudlai",
+          "review": "verve"
+        }
+      ]
+    },
+    {
+      "id": "romashka",
+      "name": "Ромашко Владислава Олексіївна",
+      "password": "romashka",
+      "type": "11-Г",
+      "coin": 10,
+      "diamond": 0,
+      "subjects": [
+        {
+          "subjectname": "література",
+          "subjects-marks": [
+            "2",
+            "4"
+          ]
+        },
+        {
+          "subjectname": "математика",
+          "subjects-marks": [
             "10"
           ]
+        }
+      ],
+      "review": []
+    },
+    {
+      "id": "dolbaib",
+      "name": "Керін Микита Довбойоб",
+      "password": "dolbaib",
+      "type": "11-A",
+      "coin": 0,
+      "diamond": 0,
+      "subjects": [
+        {
+          "subjectname": "математика",
+          "subjects-marks": [
+            "2"
+          ]
+        },
+        {
+          "subjectname": "література",
+          "subjects-marks": [
+            "1"
+          ]
+        }
+      ],
+      "review": [
+        {
+          "teacher-name": "Andrii Kudlai",
+          "review": "ЦЕ НЕМОЖЛИВО!!! ПОВЕДІНКА ЖАХЛИВА!!! Я В ШОЦІІІІІ"
+        },
+        {
+          "teacher-name": "Свєточка Біберова",
+          "review": "Побатькові все за нього сказало."
+        }
+      ]
+    },
+    {
+      "id": "galia",
+      "name": "Коновалюк Галина Олександрівна",
+      "password": "galia",
+      "type": "11-Г",
+      "coin": 10,
+      "diamond": 0,
+      "subjects": [
+        {
+          "subjectname": "математика",
+          "subjects-marks": [
+            "10"
+          ]
+        },
+        {
+          "subjectname": "література",
+          "subjects-marks": [
+            "1"
+          ]
+        }
+      ],
+      "review": [
+        {
+          "teacher-name": "Andrii Kudlai",
+          "review": "hh"
         }
       ]
     }
@@ -56,17 +193,8 @@
       "coin": 0
     },
     {
-      "id": "gav",
-      "name": "Tho",
-      "email": "kudlajandrej412@gmail.com",
-      "password": "222",
-      "type": "література",
-      "coin": 0,
-      "diamond": 0
-    },
-    {
-      "id": "hhh",
-      "name": "Andrii Kudlai",
+      "id": "truffelka",
+      "name": "Свєточка Біберова",
       "email": "kudlajandrej412@gmail.com",
       "password": "2211",
       "type": "література",
@@ -78,17 +206,17 @@
     {
       "id": "1",
       "schoolClass": "11-Г",
-      "homework": "verv"
+      "homework": [
+        {
+          "subjectname": "математика",
+          "homework": "Завдання 11-45. До завтра на оцінку"
+        }
+      ]
     },
     {
       "id": "2",
       "schoolClass": "11-B",
-      "homework": [
-        {
-          "subjectname": "математика",
-          "homework": "fff24342"
-        }
-      ]
+      "homework": []
     },
     {
       "id": "3",
@@ -98,7 +226,12 @@
     {
       "id": "4",
       "schoolClass": "11-A",
-      "homework": []
+      "homework": [
+        {
+          "subjectname": "математика",
+          "homework": "Вони всі тупі, завдань немає"
+        }
+      ]
     },
     {
       "id": "f966",
@@ -113,6 +246,20 @@
     {
       "id": "8870c714-83a2-474d-8bb2-81fb7232864d",
       "schoolClass": "7-А",
+      "homework": []
+    },
+    {
+      "id": "d7fad185-32f4-4fed-92be-e684055def67",
+      "schoolClass": "8-Г"
+    },
+    {
+      "id": "de20e592-435e-4c67-b250-ab9bfee03a77",
+      "schoolClass": "8-A",
+      "homework": []
+    },
+    {
+      "id": "c7aabde4-5673-4344-b824-4568fbc740ce",
+      "schoolClass": "5-Б",
       "homework": []
     }
   ]

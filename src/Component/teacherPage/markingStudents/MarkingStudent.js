@@ -2,12 +2,13 @@ import { useEffect, useState } from "react"
 import { useSelector, useDispatch } from "react-redux"
 import { getClasses, getAllStudents, sendAllMark, getOneStudent} from "../teacherSlice"
 import { filterStudents } from "../teacherSlice"
+import Spinner from '../../Spinner/Spinner'
 
 import './markingStudent.css'
 import '../../../reset.css'
 
 const MarkingStudent = () => {
-    const {classes, filteredStudents} = useSelector(state => state.teacher)
+    const {classes, filteredStudents, loading} = useSelector(state => state.teacher)
     const {fullInformation} = useSelector(state => state.user)
     const dispatch = useDispatch()
     const [filterClass, setFilterClass] = useState(undefined)
@@ -39,9 +40,11 @@ const MarkingStudent = () => {
     const onSubmitMarks = () => {
         const {type} = fullInformation
         for (let key in marks) {
-            let mark = marks[key]
-            let props = {key, type, mark}
-            dispatch(sendAllMark(props))    
+            if(marks[key] !== ""){
+                let mark = marks[key]
+                let props = {key, type, mark}
+                dispatch(sendAllMark(props))  
+            }  
         }
        setMarks({});
        setFilterClass("")
@@ -51,7 +54,7 @@ const MarkingStudent = () => {
         dispatch(getOneStudent(id))
     }
 
-    return(
+    return (
         <div className="container">
             <div className="mark-student__inner">
                 <div className="select__div">
@@ -103,6 +106,7 @@ const MarkingStudent = () => {
             </div>
         </div>
     )
+
 }
 
 export default MarkingStudent
