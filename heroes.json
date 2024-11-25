@@ -1,86 +1,81 @@
 {
   "person": [
     {
-      "id": "vishenka",
-      "name": "Гальченко Вікторія Едуардівна",
-      "password": "Hello_World2211+",
+      "id": "bugai",
+      "name": "Бугайов Андрій Миколайович",
+      "password": "bugai",
       "type": "11-Г",
-      "diamond": 20,
-      "coin": 10,
-      "review": [
-        {
-          "teacher_name": "Andrii Kudlai",
-          "review": "Вікторія прогулює уроки, але контролі пише на відмінно. Треба розбиратися"
-        },
-        {
-          "teacher-name": "Andrii Kudlai",
-          "review": "НЕ ХОДИТЬ НА УРОКИ!!! В РІК 2!!!"
-        },
-        {
-          "teacher-name": "Andrii Kudlai",
-          "review": "Написала контрольну не дуже гарно. Будемо телефонувати батькам........."
-        },
-        {
-          "teacher-name": "Свєточка Біберова",
-          "review": "Не дитиночка - а золота, моя улюблена Вікусічка"
-        },
-        {
-          "teacher-name": "Andrii Kudlai",
-          "review": "efwef"
-        },
-        {
-          "teacher-name": "Andrii Kudlai",
-          "review": "egrgrerv"
-        }
-      ],
+      "coin": 9,
+      "diamond": 0,
       "subjects": [
-        {
-          "subjectname": "математика",
-          "subjects-marks": [
-            "12",
-            "8",
-            "12"
-          ]
-        },
-        {
-          "subjectname": "фізика",
-          "subjects-marks": [
-            "10"
-          ]
-        },
-        {
-          "subjectname": "історія",
-          "subjects-marks": [
-            "12"
-          ]
-        },
         {
           "subjectname": "література",
           "subjects-marks": [
-            "10",
+            "7",
+            "7"
+          ]
+        },
+        {
+          "subjectname": "математика",
+          "subjects-marks": [
+            "3"
+          ]
+        }
+      ],
+      "review": [
+        {
+          "teacher-name": "Біберова Світлана Федорівна",
+          "review": "Якийся тихоня..."
+        }
+      ]
+    },
+    {
+      "id": "vishenka",
+      "name": "Гальченко Вікторія Едуардівна",
+      "password": "vishenka",
+      "type": "11-Г",
+      "coin": 23,
+      "diamond": 18,
+      "subjects": [
+        {
+          "subjectname": "література",
+          "subjects-marks": [
             "12",
-            "10",
             "12",
             "12",
+            "11"
+          ]
+        },
+        {
+          "subjectname": "математика",
+          "subjects-marks": [
             "12"
           ]
+        }
+      ],
+      "review": [
+        {
+          "teacher-name": "Біберова Світлана Федорівна",
+          "review": "Дуже гарна дівчинка"
+        },
+        {
+          "teacher-name": "Коновалюк Галина Олександрівна",
+          "review": "Контрольні пише на відмінно, але на уроки не , дуже цікаво............!!!!!!!"
         }
       ]
     },
     {
       "id": "dryafs",
       "name": "Кудлай Андрій Андрійович",
-      "password": "2211",
+      "password": "dryafs",
       "type": "11-Г",
-      "coin": 0,
-      "diamond": 15,
+      "coin": 8,
+      "diamond": 8,
       "subjects": [
         {
           "subjectname": "література",
           "subjects-marks": [
-            "12",
-            "12",
-            "12"
+            "10"
           ]
         },
         {
@@ -92,174 +87,336 @@
       ],
       "review": [
         {
-          "teacher-name": "Andrii Kudlai",
-          "review": "verve"
+          "teacher-name": "Біберова Світлана Федорівна",
+          "review": "Чекаю на Новий рік, щоб подивитися на виступ!!!"
         }
       ]
     },
     {
-      "id": "romashka",
+      "id": "romash",
       "name": "Ромашко Владислава Олексіївна",
-      "password": "romashka",
+      "password": "romash",
       "type": "11-Г",
-      "coin": 10,
+      "coin": 6,
       "diamond": 0,
       "subjects": [
         {
           "subjectname": "література",
           "subjects-marks": [
-            "2",
-            "4"
+            "6"
           ]
         },
         {
           "subjectname": "математика",
           "subjects-marks": [
-            "10"
+            "6"
           ]
         }
       ],
       "review": []
     },
     {
-      "id": "dolbaib",
-      "name": "Керін Микита Довбойоб",
-      "password": "dolbaib",
-      "type": "11-A",
-      "coin": 0,
+      "id": "gerdova",
+      "name": "Гердова Марія Петрівна",
+      "password": "gerdova",
+      "type": "11-Г",
+      "coin": 6,
       "diamond": 0,
       "subjects": [
+        {
+          "subjectname": "література",
+          "subjects-marks": [
+            "3"
+          ]
+        },
+        {
+          "subjectname": "математика",
+          "subjects-marks": [
+            "6"
+          ]
+        }
+      ],
+      "review": [
+        {
+          "teacher-name": "Біберова Світлана Федорівна",
+          "review": "Дурна кобила"
+        }
+      ]
+    },
+    {
+      "id": "vakapetian",
+      "name": "Вакапетян Петро Олегович",
+      "password": "vakapetian",
+      "type": "11-Г",
+      "coin": 6,
+      "diamond": 0,
+      "subjects": [
+        {
+          "subjectname": "література",
+          "subjects-marks": [
+            "1"
+          ]
+        },
+        {
+          "subjectname": "математика",
+          "subjects-marks": [
+            "1"
+          ]
+        }
+      ],
+      "review": [
+        {
+          "teacher-name": "Біберова Світлана Федорівна",
+          "review": "Вакапетян, він і в Африці Вакапетян"
+        }
+      ]
+    },
+    {
+      "id": "kasimov",
+      "name": "Касімов Амір-Мухамед Мірзохідович",
+      "password": "kasimov",
+      "type": "11-Г",
+      "coin": 6,
+      "diamond": 0,
+      "subjects": [
+        {
+          "subjectname": "література",
+          "subjects-marks": [
+            "7"
+          ]
+        },
+        {
+          "subjectname": "математика",
+          "subjects-marks": [
+            "8"
+          ]
+        }
+      ],
+      "review": []
+    },
+    {
+      "id": "galia",
+      "name": "Шевченко Галина Генадіївна",
+      "password": "galia",
+      "type": "11-Г",
+      "coin": 6,
+      "diamond": 0,
+      "subjects": [
+        {
+          "subjectname": "література",
+          "subjects-marks": [
+            "1"
+          ]
+        },
+        {
+          "subjectname": "математика",
+          "subjects-marks": [
+            "1"
+          ]
+        }
+      ],
+      "review": []
+    },
+    {
+      "id": "katiusha",
+      "name": "Шелепова Катерина Петрівна",
+      "password": "katiusha",
+      "type": "11-Г",
+      "coin": 6,
+      "diamond": 0,
+      "subjects": [
+        {
+          "subjectname": "література",
+          "subjects-marks": [
+            "1"
+          ]
+        },
         {
           "subjectname": "математика",
           "subjects-marks": [
             "2"
           ]
-        },
-        {
-          "subjectname": "література",
-          "subjects-marks": [
-            "1"
-          ]
         }
       ],
-      "review": [
-        {
-          "teacher-name": "Andrii Kudlai",
-          "review": "ЦЕ НЕМОЖЛИВО!!! ПОВЕДІНКА ЖАХЛИВА!!! Я В ШОЦІІІІІ"
-        },
-        {
-          "teacher-name": "Свєточка Біберова",
-          "review": "Побатькові все за нього сказало."
-        }
-      ]
+      "review": []
     },
     {
-      "id": "galia",
-      "name": "Коновалюк Галина Олександрівна",
-      "password": "galia",
+      "id": "smetana",
+      "name": "Кокорін Кирило Миколайович",
+      "password": "smetana",
       "type": "11-Г",
-      "coin": 10,
+      "coin": 6,
       "diamond": 0,
       "subjects": [
         {
-          "subjectname": "математика",
+          "subjectname": "література",
           "subjects-marks": [
-            "10"
+            "4"
           ]
         },
+        {
+          "subjectname": "математика",
+          "subjects-marks": [
+            "5"
+          ]
+        }
+      ],
+      "review": []
+    },
+    {
+      "id": "gybar",
+      "name": "Губар Тетяна Сергіївна",
+      "password": "gybar",
+      "type": "11-Г",
+      "coin": 6,
+      "diamond": 0,
+      "subjects": [
+        {
+          "subjectname": "література",
+          "subjects-marks": [
+            "7"
+          ]
+        },
+        {
+          "subjectname": "математика",
+          "subjects-marks": [
+            "6"
+          ]
+        }
+      ],
+      "review": []
+    },
+    {
+      "id": "kalush",
+      "name": "Калушкіна Ганна Генадіївна",
+      "password": "kalush",
+      "type": "11-Г",
+      "coin": 6,
+      "diamond": 0,
+      "subjects": [
+        {
+          "subjectname": "література",
+          "subjects-marks": [
+            "8"
+          ]
+        },
+        {
+          "subjectname": "математика",
+          "subjects-marks": [
+            "7"
+          ]
+        }
+      ],
+      "review": []
+    },
+    {
+      "id": "olesuk",
+      "name": "Олесюк Ганна Сергіївна",
+      "password": "olesuk",
+      "type": "11-Г",
+      "coin": 10,
+      "diamond": 10,
+      "subjects": [
+        {
+          "subjectname": "література",
+          "subjects-marks": [
+            "12"
+          ]
+        },
+        {
+          "subjectname": "математика",
+          "subjects-marks": [
+            "12"
+          ]
+        }
+      ],
+      "review": []
+    },
+    {
+      "id": "urshenko",
+      "name": "Юрченко Михайло Петрович",
+      "password": "urshenko",
+      "type": "11-Г",
+      "coin": 6,
+      "diamond": 0,
+      "subjects": [
+        {
+          "subjectname": "література",
+          "subjects-marks": [
+            "2"
+          ]
+        },
+        {
+          "subjectname": "математика",
+          "subjects-marks": [
+            "2"
+          ]
+        }
+      ],
+      "review": []
+    },
+    {
+      "id": "polulah",
+      "name": "Полюлях Богдан Антонович",
+      "password": "polulah",
+      "type": "11-Г",
+      "coin": 6,
+      "diamond": 0,
+      "subjects": [
         {
           "subjectname": "література",
           "subjects-marks": [
             "1"
           ]
+        },
+        {
+          "subjectname": "математика",
+          "subjects-marks": [
+            "5"
+          ]
         }
       ],
-      "review": [
-        {
-          "teacher-name": "Andrii Kudlai",
-          "review": "hh"
-        }
-      ]
+      "review": []
     }
   ],
   "teacher": [
     {
-      "id": "andrii",
-      "name": "Andrii Kudlai",
+      "id": "truffelka",
+      "name": "Біберова Світлана Федорівна",
       "email": "kudlajandrej412@gmail.com",
-      "password": "123456",
-      "type": "математика",
-      "diamond": 0,
-      "coin": 0
+      "password": "truffelka",
+      "type": "література",
+      "coin": 0,
+      "diamond": 0
     },
     {
-      "id": "truffelka",
-      "name": "Свєточка Біберова",
+      "id": "konov",
+      "name": "Коновалюк Галина Олександрівна",
       "email": "kudlajandrej412@gmail.com",
-      "password": "2211",
-      "type": "література",
+      "password": "konov",
+      "type": "математика",
       "coin": 0,
       "diamond": 0
     }
   ],
   "classes": [
     {
-      "id": "1",
+      "id": "bc8e7202-64ae-465d-9915-b9d99f55f754",
       "schoolClass": "11-Г",
       "homework": [
         {
-          "subjectname": "математика",
-          "homework": "Завдання 11-45. До завтра на оцінку"
-        }
-      ]
-    },
-    {
-      "id": "2",
-      "schoolClass": "11-B",
-      "homework": []
-    },
-    {
-      "id": "3",
-      "schoolClass": "11-Б",
-      "homework": []
-    },
-    {
-      "id": "4",
-      "schoolClass": "11-A",
-      "homework": [
+          "subjectname": "література",
+          "homework": "Написати твір на тему хто такий \"Андрюша\""
+        },
         {
           "subjectname": "математика",
-          "homework": "Вони всі тупі, завдань немає"
+          "homework": "Підготовка до контрольної роботи"
         }
       ]
     },
     {
-      "id": "f966",
-      "schoolClass": "5-A",
-      "homework": []
-    },
-    {
-      "id": "e9f433b1-f0d1-47d6-9175-b1860d506dcc",
-      "schoolClass": "6-А",
-      "homework": []
-    },
-    {
-      "id": "8870c714-83a2-474d-8bb2-81fb7232864d",
-      "schoolClass": "7-А",
-      "homework": []
-    },
-    {
-      "id": "d7fad185-32f4-4fed-92be-e684055def67",
-      "schoolClass": "8-Г"
-    },
-    {
-      "id": "de20e592-435e-4c67-b250-ab9bfee03a77",
-      "schoolClass": "8-A",
-      "homework": []
-    },
-    {
-      "id": "c7aabde4-5673-4344-b824-4568fbc740ce",
-      "schoolClass": "5-Б",
+      "id": "83ca0780-d1e1-4931-948c-d3a98a8f09a3",
+      "schoolClass": "11-Б",
       "homework": []
     }
   ]

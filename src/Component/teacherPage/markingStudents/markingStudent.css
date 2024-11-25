@@ -32,6 +32,9 @@
     justify-content: flex-start;
     margin-left: 20px;
     flex-direction: column;
+    overflow: auto;
+    overflow-y: scroll;
+    max-height: 65vh;
 }
 
 .class-item{

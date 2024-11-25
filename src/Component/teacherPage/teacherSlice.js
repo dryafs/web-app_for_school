@@ -60,7 +60,18 @@ export const sendAllMark = createAsyncThunk(
         const {request} = useHttp()
         const student = await request(`http://localhost:3001/person/${key}`)
         const subject = student.subjects.find(item => item['subjectname'] == type) // eslint-disable-next-line 
-        mark == 12 ? student.diamond += 5 : student.coin += 5
+        if(mark == 12){
+            student.diamond += 5;
+            student.coin += 5;
+        } else if(mark == 11){
+            student.diamond += 3;
+            student.coin += 5;
+        } else if(mark == 10){
+            student.diamond += 3;
+            student.coin += 3;
+        } else if(mark <= 9){
+            student.coin += 3;
+        }
         if (subject) {
             subject['subjects-marks'].push(mark);
         } else {
