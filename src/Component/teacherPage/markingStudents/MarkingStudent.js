@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react"
 import { useSelector, useDispatch } from "react-redux"
-import { getClasses, getAllStudents, sendAllMark, getOneStudent} from "../teacherSlice"
+import { getClasses, getAllStudents, sendAllMark, getOneStudent, updateHistory} from "../teacherSlice"
 import { filterStudents } from "../teacherSlice"
 import Spinner from '../../Spinner/Spinner'
 
@@ -43,7 +43,10 @@ const MarkingStudent = () => {
             if(marks[key] !== ""){
                 let mark = marks[key]
                 let props = {key, type, mark}
+                let text = `Ви отримали ${mark} з ${type}`
+                let history = {key, text}
                 dispatch(sendAllMark(props))  
+                dispatch(updateHistory(history))
             }  
         }
        setMarks({});

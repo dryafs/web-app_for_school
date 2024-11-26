@@ -16,7 +16,8 @@ const AddStudentForm = () => {
         coin: 0,
         diamond: 0,
         subjects: [],
-        review: []
+        review: [],
+        lastUpdates: []
     })
     const [validate, setValidate] = useState(true)
 

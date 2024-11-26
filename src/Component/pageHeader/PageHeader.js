@@ -13,7 +13,7 @@ const PageHeader = () => {
     const {name, type, coin, diamond} = fullInformation
     return(
         <header className="header">
-            <div className="container">
+            <div className="container__header">
                 <div className="header__inner">
                     <img src={user_img} alt="" />
                     <p className="header__name">{name}</p>

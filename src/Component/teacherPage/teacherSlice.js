@@ -81,8 +81,6 @@ export const sendAllMark = createAsyncThunk(
             });
         }
 
-
-
         return await request(
             `http://localhost:3001/person/${key}`,
             'PUT',
@@ -117,6 +115,21 @@ export const sendHomework = createAsyncThunk(
         }
 
         return await request(`http://localhost:3001/classes/${id}`, 'PUT', JSON.stringify(element))
+    }
+)
+
+export const updateHistory = createAsyncThunk(
+    'updateHistory',
+    async ({key, text}) => {
+        const {request} = useHttp();
+        const student = await request(`http://localhost:3001/person/${key}`)
+        if(student.lastUpdates.length >= 3){
+            student.lastUpdates.shift()
+        }
+
+        student.lastUpdates.push({news: text})
+
+        await request(`http://localhost:3001/person/${key}`, 'PUT', JSON.stringify(student))
     }
 )
 

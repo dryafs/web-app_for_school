@@ -1,0 +1,9 @@
+.nav-menu__section{
+    display: flex;
+}
+
+.top-components__inner{
+    display: flex;
+    gap: 100px;
+    margin-top: 50px;
+}

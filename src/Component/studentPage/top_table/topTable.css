@@ -1,0 +1,22 @@
+.top-table{
+    width: 40vh;
+    height: 27vh;
+    background-color: #E1ECFF;
+    position: relative;
+    border-radius: 8px;
+    margin-top: 70px;
+    padding: 25px 25px;
+}
+
+.top-table__title{
+    font-size: 22px;
+    color: #5467AF;
+    padding-bottom: 30px;
+    font-weight: 600;
+}
+
+.top-table__item{
+    color: #5467AF;
+    font-size: 18px;
+    padding-bottom: 5px;
+}

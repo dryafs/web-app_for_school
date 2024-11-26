@@ -1,8 +1,28 @@
 import PageHeader from "../pageHeader/PageHeader";
+import NavMenu from "./navMenu/NavMenu";
+import Top from "./top/Top";
+import TopTable from "./top_table/TopTable";
+
+
+import './studentPage.css'
 
 const StudentPage = () => {
     return(
-        <PageHeader/>
+        <div className="student-page__inner">
+            <div>
+                <PageHeader/>
+            </div>
+            <div className="nav-menu__section">
+                <NavMenu/>
+                <div className="top-components__inner">
+                    <div>
+                        <h1 className='title__homepage container'>Головна</h1>
+                        <Top/>
+                    </div>
+                    <TopTable/>
+                </div>
+            </div>
+        </div>
     )
 }
 
