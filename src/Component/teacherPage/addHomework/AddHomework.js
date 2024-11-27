@@ -1,11 +1,11 @@
 import { useSelector, useDispatch } from 'react-redux'
 import { useState } from 'react'
-import { sendHomework } from '../teacherSlice'
+import { sendHomework, updateHistory } from '../teacherSlice'
 
 import './addHomework.css'
 
 const AddHomework = () => {
-    const {classes} = useSelector(state => state.teacher)
+    const {classes, allStudents} = useSelector(state => state.teacher)
     const {fullInformation} = useSelector(state => state.user)
     const dispatch = useDispatch()
     const [validate, setValidate] = useState(true)
@@ -23,7 +23,7 @@ const AddHomework = () => {
         }))
     }
 
-    const onSubmitting = (e) => {
+    const onSubmitting = async (e) => {
         e.preventDefault();
         const {id} = homework
         const data = {
@@ -31,8 +31,17 @@ const AddHomework = () => {
             homework: homework.homework
         }
 
+
         if(id !== '' && homework.homework !== ''){
-            dispatch(sendHomework({id, data}))
+            const selectedClass = classes.find((cls) => cls.id === id);
+            await dispatch(sendHomework({id, data})).unwrap()
+            allStudents.forEach(item => {
+                if(item.type === selectedClass.schoolClass){
+                    dispatch(updateHistory({ key: item.id, text: `Вам було додано д/з з предмету ${fullInformation.type}`}))
+                }
+            })
+
+
             setValidate(true)
             setHomework({
                 id: '',
@@ -59,7 +68,7 @@ const AddHomework = () => {
                 >
                 <option value="">Оберіть клас...</option>
                 {classes.map(item => {
-                    return <option value={item.id}>{item.schoolClass}</option>
+                    return <option key={item.schoolClass} value={item.id}>{item.schoolClass}</option>
                 })}
             </select>
 

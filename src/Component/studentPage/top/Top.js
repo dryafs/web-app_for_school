@@ -22,7 +22,7 @@ const Top = () => {
 
     
     return(
-        <div className="container">
+        <div>
             <div className="top">
                 <div className="top__inner">
                     <div className="student__top">

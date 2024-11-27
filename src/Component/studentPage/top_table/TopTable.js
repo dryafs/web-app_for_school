@@ -6,7 +6,7 @@ const TopTable = () => {
     const {filteredStudents} = useSelector(state => state.student)
 
     return(
-        <div className="container">
+        <div>
             <div className="top-table">
                 <h1 className="top-table__title">Таблиця лідерів</h1>
                 <ul className="top-table__inner">

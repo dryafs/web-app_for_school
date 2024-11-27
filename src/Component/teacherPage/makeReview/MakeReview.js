@@ -1,6 +1,6 @@
 import { useSelector, useDispatch } from "react-redux"
 import { useEffect, useState } from "react"
-import { sendReview } from "../teacherSlice"
+import { sendReview, updateHistory } from "../teacherSlice"
 
 import './makeReview.css'
 
@@ -20,15 +20,18 @@ const MakeReview = () => {
         setReview(e.target.value)
     }
 
-    const onSubmitReview = (e) => {
+    const onSubmitReview = async (e) => {
         e.preventDefault();
         const data = {
             'teacher-name': fullInformation.name,
             review: review
         }
 
+
         if(isItChoosedStudent && review !== ''){
-            dispatch(sendReview({id: currentStudent.id, data}))
+            await dispatch(sendReview({id: currentStudent.id, data})).unwrap()
+            let text = `Ви отримали новий відгук від ${fullInformation.name}`
+            dispatch(updateHistory({key: currentStudent.id, text}))
             setValidate(true)
             setReview('')
         } else{

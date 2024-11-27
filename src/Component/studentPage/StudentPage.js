@@ -2,6 +2,7 @@ import PageHeader from "../pageHeader/PageHeader";
 import NavMenu from "./navMenu/NavMenu";
 import Top from "./top/Top";
 import TopTable from "./top_table/TopTable";
+import StudentUpdates from "./studentUpdates/StudentUpdates";
 
 
 import './studentPage.css'
@@ -20,6 +21,7 @@ const StudentPage = () => {
                         <Top/>
                     </div>
                     <TopTable/>
+                    <StudentUpdates/>
                 </div>
             </div>
         </div>

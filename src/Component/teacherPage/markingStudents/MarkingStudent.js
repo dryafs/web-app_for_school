@@ -37,7 +37,7 @@ const MarkingStudent = () => {
         }))
     }
 
-    const onSubmitMarks = () => {
+    const onSubmitMarks = async () => {
         const {type} = fullInformation
         for (let key in marks) {
             if(marks[key] !== ""){
@@ -45,7 +45,7 @@ const MarkingStudent = () => {
                 let props = {key, type, mark}
                 let text = `Ви отримали ${mark} з ${type}`
                 let history = {key, text}
-                dispatch(sendAllMark(props))  
+                await dispatch(sendAllMark(props)).unwrap()
                 dispatch(updateHistory(history))
             }  
         }
@@ -58,7 +58,7 @@ const MarkingStudent = () => {
     }
 
     return (
-        <div className="container">
+        <div>
             <div className="mark-student__inner">
                 <div className="select__div">
                     <select 
