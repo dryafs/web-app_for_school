@@ -1,0 +1,58 @@
+.add-form__inner{
+    background-color: #F0F6FF;
+    margin-top: 30px;
+    height: 50vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-radius: 8px;
+}
+
+.add-form__title{
+    padding-top: 30px;
+    font-family: 'Kyiv Region';
+    font-size: 20px;
+    color: #404B7C;
+}
+
+.add-form{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 50px;
+}
+
+.input-form{
+    background-color:#E1ECFF;
+}
+
+.input.active{
+    border: 1px solid #FF0000;
+}
+.input.active::placeholder{
+    color: #FF0000;
+}
+.select-form__inner.active{
+    border: 1px solid #FF0000;
+}
+
+.select-form__inner{
+    background-color: #E1ECFF;
+    width: 310px;
+    padding: 10px 10px 10px 10px;
+    border-radius: 8px;
+    margin-bottom: 50px;
+}
+
+.button__add-form{
+    margin-bottom: 30px;
+    font-family: 'Kyiv Region';
+    font-size: 20px;
+    background-color: #404B7C;
+    color: #E1ECFF;
+    padding: 5px 5px 5px 5px;
+    width: 150px;
+    border-radius: 8px;
+}
+
+

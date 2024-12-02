@@ -1,0 +1,51 @@
+.marks{
+    padding-left: 20vh;
+}
+
+.table__container{
+    height: 75vh;
+    overflow-y: auto;
+}
+
+.title__marks{
+    margin-bottom: 40px;
+    font-family: 'Kyiv Region';
+    font-size: 40px;
+    color: #1C3177;
+    margin-top: 60px;
+}
+
+.marks__table {
+    width: 1000px;
+    border-collapse: collapse;
+}
+
+.marks__table th,
+.marks__table td {
+    border: 1px solid #1C3177;
+    text-align: left;
+    color: #5467AF;
+    padding: 23px 10px 23px 10px;
+}
+
+.marks__table td {
+    font-size: 16px;
+    font-weight: 400;
+}
+
+.marks__table th {
+    font-size: 16px;
+    font-weight: 800;
+    text-align: center;
+}
+
+
+.marks__table-header{
+   padding-left: 30px;
+}
+
+tbody {
+    height: 40vh;
+    overflow: scroll;
+    overflow-y: auto;
+}

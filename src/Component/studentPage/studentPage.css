@@ -1,0 +1,8 @@
+.student-page__inner {
+    position: relative; 
+}
+
+.nav-menu__section {
+    display: flex;
+    width: 100%;
+}

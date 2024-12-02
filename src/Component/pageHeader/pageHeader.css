@@ -1,0 +1,43 @@
+.header{
+    box-shadow: 0 0 3px rgba(0, 0, 0, 0.5);
+}
+
+.container__header{
+    width: 95%;
+    margin-left: auto;
+}
+
+.header__inner{
+    display: flex;
+    gap: 20px;
+    align-items: center;
+    padding-top: 15px;
+    padding-bottom: 15px;
+}
+
+.header__class{
+    padding-right: 25px;
+    padding-left: 25px;
+}
+
+.header__money__inner{
+    background-color: #E9EDFA;
+    display: flex;
+    gap: 20px;
+    width: 220px;
+    justify-content: center;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    border-radius: 10px;
+}
+.currency__img{
+    width: 18px;
+    height: 18px;
+}
+.header__money{
+    display: flex;
+    gap: 7px;
+}
+.diamond__count, .coin__count{
+    color: #1C3177;
+}

@@ -1,0 +1,138 @@
+@font-face {
+    font-family: 'Kyiv Region';
+    src: url('../../fonts/KyivRegion-Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+.sign__section{
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    position: relative;
+}
+.other__content{
+    width: 100%;
+    display: block;
+    text-align: center;
+    margin-top: 200px;
+}
+
+.background__img__dog{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.dog_bg{
+    width: 60%;
+    height: 30%;
+    display: flex;
+    align-items:center;
+   
+}
+
+.sign__inner{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.title__sign__inner{
+    margin-top: 20%;
+    padding-bottom: 70px;
+    text-align: center;
+}
+
+.title__sign{
+    font-family: 'Kyiv Region';
+    font-size: 64px;
+    color: #1C3177;
+}
+.text__sign{
+    color: #1C3177;
+}
+
+
+.input__inner{
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 10px;
+}
+
+
+.input{
+    width: 310px;
+    margin-bottom: 15px;
+    padding: 15px 15px 15px 15px;
+    border-radius: 8px;
+    border: none;
+    background-color: #E1ECFF80;
+}
+.input::placeholder {
+    color: #404B7C; 
+    opacity: 1;
+}
+
+.select{
+    width: 310px;
+    margin-bottom: 15px;
+    padding: 15px 15px 15px 15px;
+    border-radius: 8px;
+    border: none;
+    background-color: #E1ECFF80;
+}
+
+.api__sign__links{
+    width: 310px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 15px 0 20px 0;
+    gap: 15px;
+}
+
+.input__second.active{
+    border: 1px solid #FF0000;
+}
+.input__second.active::placeholder{
+    color: #FF0000;
+}
+
+.btn_sign{
+    width: 310px;
+    background-color:#E1ECFF;
+    border-radius: 8px;
+    padding: 15px 15px 15px 15px;
+    font-family: 'Kyiv Region';
+    font-size: 16px;
+    color: #404B7C;
+}
+
+.reg__link__inner{
+    margin-top: auto;
+    margin-bottom: 8%;
+
+    text-align: center;
+}
+.reg__link__text{
+    font-size: 12px;
+    color: #8E98BB;
+}
+.reg__link{
+    font-family: 'Kyiv Region';
+    font-size: 20px;
+    color: #1C3177 !important;
+}
+
+
+.background__img__inner{
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+}
+
+.background__img{
+    height: 100vh;
+    width: 100%;
+}

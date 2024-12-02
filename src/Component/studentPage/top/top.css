@@ -1,0 +1,55 @@
+.container{
+    width: 70%;
+    margin: 0 auto;
+}
+
+.title__homepage{
+    margin-bottom: 20px;
+    font-family: 'Kyiv Region';
+    font-size: 40px;
+    color: #1C3177
+}
+
+.top{
+    display: flex;
+    width: 40vh;
+    height: 27vh;
+    background-color: #E1ECFF;
+    position: relative;
+    border-radius: 8px;
+    margin-left: 65px;
+}
+
+.top__inner{
+    display: flex;
+    gap: 50px;
+    width: 100%;
+    justify-content: center;
+    padding-top: 60px;
+}
+
+.student__top, .class__top{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    width: 100px;
+}
+
+.student__position, .class__number{
+    color: #5467AF;
+    font-size: 50px;
+}
+
+.student__text, .class__text{
+    color: #5467AF;
+    font-size: 14px;
+}
+
+.snake__bg{
+    display: flex;
+    width: 230px;
+    height: 120px;
+    position: absolute;
+    bottom: 0;
+    right: 20px;
+}

@@ -1,0 +1,33 @@
+.contacts{
+    margin: 5vh 10vh;
+}
+
+.title__contacts{
+    margin-bottom: 40px;
+    font-family: 'Kyiv Region';
+    font-size: 40px;
+    color: #1C3177;
+    margin-top: 60px;
+}
+
+.contacts__list{
+    height: 70vh;
+    overflow: scroll;
+    overflow-y: auto;
+}
+
+.contacts__item{
+    padding-bottom: 30px;
+}
+
+.contacts-item__name{
+    color: #5467AF;
+    font-size: 22px;
+    font-weight: 600;
+    padding-bottom: 5px;
+}
+
+.contacts-item__email{
+    padding-left: 10px;
+    font-size: 18px;
+}

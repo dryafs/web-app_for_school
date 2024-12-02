@@ -1,0 +1,59 @@
+.student-homework{
+    width: 55vh;
+    height: 40vh;
+    background-color: #E1ECFF;
+    border-radius: 8px;
+    padding: 35px 25px;
+    margin-left: 60px;
+}
+
+.student-homework__title{
+    font-size: 22px;
+    color: #5467AF;
+    padding-bottom: 60px;
+    font-weight: 600;
+    padding-left: 10px;
+}
+
+.student-homework__item-container{
+    position: relative;
+}
+
+.student-homework__item-container::after{
+    content: "";
+    display: block;
+    width: 100%;
+    height: 1px;
+    background-color: white;
+    margin-top: 15px;
+    margin-bottom: 15px;
+}
+.student-homework__item-container:last-child::after{
+    display: none;
+}
+
+.student-homework__inner{
+    height: 25vh;
+    overflow: scroll;
+    overflow-y: auto;
+}
+
+.student-homework__item{
+    display: flex;
+}
+
+.student-homework__subject{
+    width: 50%;
+    font-size: 18px;
+    color: #5467AF;
+    font-weight: 600;
+    padding-left: 15px;
+}
+
+.student-homework__task{
+    width: 50%;
+    display: flex;
+    max-width: 250px;
+    font-size: 16px;
+    color: #5467AF;
+}

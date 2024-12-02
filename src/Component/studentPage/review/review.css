@@ -1,0 +1,34 @@
+.review{
+    width: 1200px;
+    margin: 5vh 18vh;
+}
+
+.title__review{
+    margin-bottom: 40px;
+    font-family: 'Kyiv Region';
+    font-size: 40px;
+    color: #1C3177;
+}
+
+.review__list{
+    height: 70vh;
+    overflow: scroll;
+    overflow-y: auto;
+}
+
+.review__item{
+    padding-bottom: 30px;
+}
+
+.review-item__name{
+    color: #5467AF;
+    font-size: 22px;
+    font-weight: 600;
+    padding-bottom: 25px;
+}
+
+.review-item__text{
+    color: #5467AF;
+    font-size: 16px;
+    padding-left: 40px;
+}

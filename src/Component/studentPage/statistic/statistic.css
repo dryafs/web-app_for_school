@@ -1,0 +1,30 @@
+.statistic{
+    width: 55vh;
+    height: 40vh;
+    background-color: #E1ECFF;
+    border-radius: 8px;
+    padding: 35px 25px;
+}
+
+.select__subject{
+    width: 310px;
+    margin-bottom: 15px;
+    padding: 15px 15px 15px 15px;
+    border-radius: 8px;
+    border: none;
+    background-color: #B5C4FE80;
+}
+
+.statistic__title{
+    font-size: 22px;
+    color: #5467AF;
+    padding-bottom: 20px;
+    font-weight: 600;
+    padding-left: 10px;
+}
+
+.statistic__inner{
+    display: flex;
+    flex-direction: column;
+    align-items: center
+}

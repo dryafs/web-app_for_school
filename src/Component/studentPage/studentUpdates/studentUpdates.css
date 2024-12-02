@@ -1,0 +1,28 @@
+.student-updates{
+    margin-top: 70px;
+    width: 63vh;
+    height: 27vh;
+    background-color: #E1ECFF;
+    border-radius: 8px;
+    padding: 25px 25px;
+}
+
+.student-updates__title{
+    font-size: 22px;
+    color: #5467AF;
+    padding-bottom: 20px;
+    font-weight: 600;
+}
+
+.student-updates__date{
+    font-size: 16px;
+    color: #5467AF;
+    padding-bottom: 20px;
+    font-weight: 600;
+}
+
+.student-updates__item{
+    color: #5467AF;
+    font-size: 18px;
+    padding-bottom: 5px;
+}

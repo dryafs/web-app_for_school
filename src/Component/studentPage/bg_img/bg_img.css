@@ -1,0 +1,12 @@
+.bg__img{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+}
+
+.bg-img__text{
+    padding-bottom: 30px;
+    font-size: 22px;
+    color: #FBBC05;
+    font-weight: 800;
+}
