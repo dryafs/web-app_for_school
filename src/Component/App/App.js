@@ -13,7 +13,6 @@ import Contacts from '../studentPage/contacts/Contacts';
 import Review from '../studentPage/review/Review'
 
 
-
 const App = () => {
     const {fullInformation} = useSelector(state => state.user)
     

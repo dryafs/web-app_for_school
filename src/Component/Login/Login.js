@@ -59,10 +59,11 @@ const Login = () => {
                     login: '',
                     password: ''
                 })
-            navigate(`${formInput.path}/homepage`)
+            navigate(`${formInput.path}/homepage`, {replace: true})
+            setLoginAttempted(false)
         }
         }
-    }, [proofLogin, navigate, loginAttempted])
+    }, [proofLogin, navigate])
 
 
     const load = loading ? <Spinner/> : null

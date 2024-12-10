@@ -41,3 +41,11 @@
 .diamond__count, .coin__count{
     color: #1C3177;
 }
+
+.exit__button {
+    margin-right: 40px;
+    margin-left: auto;
+    cursor: pointer;
+    width: 30px;
+    height: 30px;
+}

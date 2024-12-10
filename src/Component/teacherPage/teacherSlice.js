@@ -96,6 +96,10 @@ export const sendReview = createAsyncThunk(
     async ({id, data}) => {
         const {request} = useHttp();
         const student = await request(`http://localhost:3001/person/${id}`)
+        if(student.review.length >= 20){
+            student.review.shift()
+        }
+
         student.review.push(data)
 
         return await request(`http://localhost:3001/person/${id}`, 'PUT', JSON.stringify(student))

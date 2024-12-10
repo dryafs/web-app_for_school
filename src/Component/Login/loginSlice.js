@@ -45,6 +45,13 @@ const userSlice = createSlice({
               sessionStorage.removeItem('fullInformation');
             }
         },
+        deleteFullInformation: (state) => {
+            state.fullInformation = null
+            state.currentPassword = ''
+            state.proofSing = null
+            state.proofLogin = null
+            sessionStorage.removeItem('fullInformation')
+        }
     },
     extraReducers: (builder) => {
         builder
@@ -79,6 +86,6 @@ const userSlice = createSlice({
     }
 })
 
-export const {action, reducer} = userSlice;
-
+export const {actions, reducer} = userSlice;
+export const {deleteFullInformation} = actions;
 export default reducer;
