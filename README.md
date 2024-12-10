@@ -10,11 +10,20 @@ With this project, I would like to summarise all the knowledge I have gained fro
 
 
 To run the project, you need to upload the full file.
+
 Next, in the terminal, enter 
+
 npm i
+
+
 In order for all dependencies to be pulled in locally
+
 Next. 
 npm start
+
+
 Now you can test my project, if you want to log in as a user, you can use values like:
+
 login: admin
+
 password: admin
